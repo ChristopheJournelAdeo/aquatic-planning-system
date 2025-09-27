@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Planning</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-content { background: #f0f8ff; padding: 20px; border-radius: 8px; }
+        .planning-grid { display: grid; grid-template-columns: 200px repeat(7, 1fr); gap: 10px; margin-top: 20px; }
+        .header { background: #0ea5e9; color: white; padding: 10px; text-align: center; font-weight: bold; }
+        .cell { background: #e0f2fe; padding: 10px; border-radius: 4px; min-height: 60px; }
+    </style>
+</head>
+<body>
+    <div class="test-content">
+        <h1>🏊‍♀️ Test Planning Piscine</h1>
+        <p>Si vous voyez ce contenu, le serveur fonctionne !</p>
+        
+        <div id="loadingTest">⏳ Chargement du planning de test...</div>
+        
+        <div id="planningTest" style="display: none;">
+            <div class="planning-grid">
+                <div class="header">Coachs</div>
+                <div class="header">Lundi</div>
+                <div class="header">Mardi</div>
+                <div class="header">Mercredi</div>
+                <div class="header">Jeudi</div>
+                <div class="header">Vendredi</div>
+                <div class="header">Samedi</div>
+                <div class="header">Dimanche</div>
+                
+                <div class="cell">Marie Dubois<br><small>Natation adulte</small></div>
+                <div class="cell">08:00-09:00<br>Cours débutant</div>
+                <div class="cell">09:00-10:00<br>Perfectionnement</div>
+                <div class="cell">10:00-11:00<br>Aqua fitness</div>
+                <div class="cell">11:00-12:00<br>Cours privé</div>
+                <div class="cell">14:00-15:00<br>École de nage</div>
+                <div class="cell">15:00-16:00<br>Water polo</div>
+                <div class="cell">16:00-17:00<br>Plongée</div>
+            </div>
+        </div>
+        
+        <button onclick="showPlanning()">Afficher le planning test</button>
+    </div>
+    
+    <script>
+        console.log('🚀 Test script chargé');
+        
+        function showPlanning() {
+            console.log('📋 Affichage du planning test');
+            document.getElementById('loadingTest').style.display = 'none';
+            document.getElementById('planningTest').style.display = 'block';
+        }
+        
+        // Auto-affichage après 2 secondes
+        setTimeout(() => {
+            console.log('⏰ Auto-affichage après 2 secondes');
+            showPlanning();
+        }, 2000);
+    </script>
+</body>
+</html>
